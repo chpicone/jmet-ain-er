@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:16.04
 MAINTAINER Christian R. Picone <ch.picone@gmail.com>
 
 RUN apt-get update && apt-get install -y unzip php5.6
