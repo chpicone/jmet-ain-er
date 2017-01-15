@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Christian Lück <christian@lueck.tv>
+MAINTAINER Christian R. Picone <ch.picone@gmail.com>
 
 RUN apt-get update && apt-get install -y unzip php5-cli
 
