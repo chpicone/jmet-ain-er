@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 MAINTAINER Christian R. Picone <ch.picone@gmail.com>
 
+ENV port=1974
+
 #------ INSTALL JMETER 3.1
 RUN cd /
 ADD http://apache.panu.it//jmeter/binaries/apache-jmeter-3.1.tgz /apache-jmeter-3.1.tgz
@@ -22,6 +24,6 @@ WORKDIR php-redis-server
 ADD https://getcomposer.org/composer.phar /php-redis-server/composer.phar
 RUN php composer.phar install
 
-USER nobody
-EXPOSE 6379
-CMD php bin/redis-server.php
+USER root
+EXPOSE ${port}
+CMD php bin/redis-server.php ${port}

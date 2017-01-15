@@ -11,7 +11,7 @@ Further runs will be immediate, as the image will be cached locally.
 The recommended way to run this container looks like this:
 
 ```bash
-$ docker run -ti -d --name jmetainer geosystems/jmet-ain-er
+$ docker run -ti -d --name jmetainer geosystems/jmet-ain-er:latest -p 1974:1974
 ```
 
 This is a rather common setup following docker's conventions:

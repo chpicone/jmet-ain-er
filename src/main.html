@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>JMet-ain-er</title>
+	<!-- CSS -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/simple-sidebar.css" rel="stylesheet">
+	<!-- JS -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    
+    <script>
+		$(document).ready( function(){			
+			$("#wrapper-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+				$("#header").toggleClass("toggled");
+			});
+		});
+    </script>
+    
+</head>
+<body>
+	<div id="wrapper">
+		<div id="sidebar-wrapper" ui-view="sidebar">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<div>
+						<img src="images/logo.png" width="120px">
+						<span id="wrapper-toggle" class="glyphicon glyphicon-transfer"></span>
+						<a href="https://hub.docker.com/r/geosystems/jmet-ain-er/" target="_blank">JMet-ain-er</a>
+					</div>					
+				</li>
+				<li>
+					<a href="#">Dashboard
+						<span class="glyphicon glyphicon-dashboard"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">Projects
+						<span class="glyphicon glyphicon-briefcase"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">Web Hooks
+						<span class="glyphicon glyphicon-link"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">Overview
+						<span class="glyphicon glyphicon-heart"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">Contact
+						<span class="glyphicon glyphicon-envelope"></span>
+					</a>
+				</li>
+			</ul>
+		
+			<div class="row sidebar-footer">
+				<div class="col-xs-12">
+				<a href="https://github.com/chpicone/jmet-ain-er" target="_blank">
+					<img src="images/github.png" width="16px">
+					v 0.1.0
+				</a>
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		
+		
+		<div id="content-wrapper">
+			<div class="page-content">
+				<!-- Main Content -->
+				<div id="view" ui-view="content">
+					
+					<div id="header" class="row header">HEADER</div>
+				
+				</div>
+			</div><!-- End Page Content -->
+		</div><!-- End Content Wrapper -->
+	</div><!-- End Page Wrapper --> 
+</body>
+</html>
+
