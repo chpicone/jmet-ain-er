@@ -1,7 +1,8 @@
 FROM ubuntu:16.04
 MAINTAINER Christian R. Picone <ch.picone@gmail.com>
 
-ENV port=1974
+ENV port=6397
+ENV version=0.1.0
 
 #------ INSTALL JMETER 3.1
 RUN cd /
@@ -20,10 +21,16 @@ RUN unzip php-redis-server.zip && mv php-redis-server-master php-redis-server
 RUN rm php-redis-server.zip
 WORKDIR php-redis-server
 
+#------ INSTALL WEBAPP
+#ADD https://github.com/chpicone/jmet-ain-er/archive/${version}.zip /jmet-ain-er.zip
+#RUN unzip jmet-ain-er.zip && mv jmet-ain-er-${version} jmet-ain-er
+#RUN rm jmet-ain-er.zip
+#WORKDIR jmet-ain-er
+
 #------ INSTALL COMPOSER
 ADD https://getcomposer.org/composer.phar /php-redis-server/composer.phar
 RUN php composer.phar install
 
 USER root
 EXPOSE ${port}
-CMD php bin/redis-server.php ${port}
+CMD php bin/redis-server.php

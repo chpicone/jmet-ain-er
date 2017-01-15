@@ -132,6 +132,9 @@
     bottom: 0;
     text-align: center;
     width: 100%;
+    line-height: 40px;
+    background-color: #1A1A1A;
+    margin-left: 0px;
 }
 
 .sidebar-footer a{
@@ -143,6 +146,8 @@
     padding-left: 10px;
     background-color: white;
     line-height: 50px;
+    border-radius: 8px;
+    margin-right: 0px;
 }
 
 #header.toggled{

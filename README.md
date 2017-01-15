@@ -1,4 +1,4 @@
-# jmetainer
+# jmet-ain-er
 This is a project to make docker container to manage jmeter test with web interface
 
 ## Usage
@@ -20,3 +20,4 @@ This is a rather common setup following docker's conventions:
 * `-d` will run a detached session running in the background
 * `--name` will assign the given name to the running container instance
 * `geosystems/jmet-ain-er` the name of this docker image
+* `-p` define port mapping with host
