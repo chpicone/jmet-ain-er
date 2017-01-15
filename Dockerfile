@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Christian R. Picone <ch.picone@gmail.com>
 
-RUN apt-get update && apt-get install -y unzip php5-cli
+RUN apt-get update && apt-get install -y unzip php5.6-cli
 
 ADD https://github.com/clue/php-redis-server/archive/master.zip /php-redis-server.zip
 RUN unzip php-redis-server.zip && mv php-redis-server-master php-redis-server
