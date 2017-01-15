@@ -7,7 +7,7 @@ ADD http://apache.panu.it//jmeter/binaries/apache-jmeter-3.1.tgz /jmeter/apache-
 RUN tar -xf /jmeter/apache-jmeter-3.1.tgz
 
 #------ INSTALL PHP 5.6
-RUN apt-get update && apt-get install software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update && apt-get install -y --allow-unauthenticated unzip php5.6
 
